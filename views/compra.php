@@ -17,16 +17,16 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <form action="../controllers/compraController.php" method="POST">
 
 <label>Entradas:</label>
-    <select name="entrada_id">
-        <?php
-        $stmt = $conn->query("SELECT * FROM Entradas");
-        $entradas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($entradas as $entrada): ?>
-            <option value="<?= $entrada['id'] ?>">
-                <?= $entrada['tipo'] ?> - $<?= $entrada['precio'] ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
+    <?php
+    $stmt = $conn->query("SELECT * FROM Entradas");
+    $entradas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($entradas as $entrada): ?>
+        <div>
+            <label><?= $entrada['tipo'] ?> - $<?= $entrada['precio'] ?> c/u</label>
+            <input type="hidden" name="entrada_id[]" value="<?= $entrada['id'] ?>">
+            <input type="number" name="cantidad_entrada[]" value="0" min="0">
+        </div>
+    <?php endforeach; ?>
  <br>
     <label>Productos:</label><br>
     <?php foreach ($productos as $producto): ?>
