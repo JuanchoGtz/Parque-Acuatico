@@ -30,4 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="email" name="email" placeholder="Correo" required>
     <input type="password" name="password" placeholder="Contraseña" required>
     <button type="submit">Ingresar</button>
+
+    <p>¿No tienes cuenta? <a href="register.php">Regístrate aquí</a></p>
+
 </form>
