@@ -47,7 +47,7 @@
 
     <!-- Información del Lugar -->
     <div class="top-info">
-        <h1>Nombre del Lugar</h1>
+        <h1>Río Salvaje</h1>
         <p>Dirección: Calle 123, Ciudad, País | Teléfono: +123 456 7890</p>
     </div>
 
