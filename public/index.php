@@ -196,7 +196,95 @@
 
         <div id="servicios" style="display:none;">
             <h2>Servicios</h2>
-            <p>Estos son los servicios que ofrecemos.</p>
+           <!-- Primera Sección: Texto Izquierda - Imagen Derecha -->
+    <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Estacionamiento</h3>
+                <p>Ideal para la familia (Maximo 4 personas) </p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Estacionamiento.jpg" class="img-fluid rounded" alt="Alberca Familiar">
+            </div>
+        </div>
+    </div>
+    <!-- Segunda Sección: Imagen Izquierda - Texto Derecha -->
+    <div class="container mt-4">
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-6">
+                <h3>Servicio médico</h3>
+                <p>Ideal para un viaje de Amigos (Maximo 6 personas)</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Servicio-Medico.jpg" class="img-fluid rounded" alt="Alberca Olímpica">
+            </div>
+        </div>
+    </div>
+
+ <!-- Tercera Sección: Texto Izquierda - Imagen Derecha -->
+ <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Regaderas</h3>
+                <p>Perfecto para Venir a la naturaleza y conocer tu lado natural</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Regaderas.jpg" class="img-fluid rounded" alt="Alberca Familiar">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cuarta Sección: Imagen Izquierda - Texto Derecha -->
+    <div class="container mt-4">
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-6">
+                <h3>Seguridad las 24 Hrs</h3>
+                <p>Ideal para un viaje de Amigos (Maximo 6 personas)</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Seguridad.jpg" class="img-fluid rounded" alt="Alberca Olímpica">
+            </div>
+        </div>
+    </div>
+
+    <!-- Quinta Sección: Texto Izquierda - Imagen Derecha -->
+ <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Asadores</h3>
+                <p>Perfecto para Venir a la naturaleza y conocer tu lado natural</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Asadores.jpg" class="img-fluid rounded" alt="Alberca Familiar">
+            </div>
+        </div>
+    </div>
+
+<!-- Sexta Sección: Imagen Izquierda - Texto Derecha -->
+<div class="container mt-4">
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-6">
+                <h3>Áreas verdes</h3>
+                <p>Ideal para un viaje de Amigos (Maximo 6 personas)</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Areas-Verdes.jpg" class="img-fluid rounded" alt="Alberca Olímpica">
+            </div>
+        </div>
+    </div>
+
+<!-- Septima Sección: Texto Izquierda - Imagen Derecha -->
+<div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Renta de casas de campaña</h3>
+                <p>Perfecto para Venir a la naturaleza y conocer tu lado natural</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Camping.jpg" class="img-fluid rounded" alt="Alberca Familiar">
+            </div>
+        </div>
+    </div>
         </div>
     </div>
 
