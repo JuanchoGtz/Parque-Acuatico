@@ -1,14 +1,16 @@
 Crear un sitio web para un parque acuático
 
 El parque acuático cuenta con:
-
+        -----Albercas----
 ·        Alberca infantil.
 ·        Alberca familiar.
 ·        Alberca de olas con toboganes.
 ·        Lago natural.
+        -----Hospedaje-----
 ·        Cabañas para 4 personas.
 ·        Cabañas para 6 personas
 ·        Áreas de camping.
+        -----Servicios-----
 ·        Estacionamiento.
 ·        Servicio médico.
 ·        Regaderas
