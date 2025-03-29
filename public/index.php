@@ -93,7 +93,7 @@
             </div>
         </div>
 
-        <div id="albercas" style="display:none;">
+    <div id="albercas" style="display:none;">
     <h2 class="mt-4">Albercas</h2>
     
     <!-- Primera Sección: Texto Izquierda - Imagen Derecha -->
@@ -104,7 +104,7 @@
                 <p>Disfruta de un espacio seguro y divertido para toda la familia con agua templada y áreas de descanso.</p>
             </div>
             <div class="col-md-6">
-                <img src="imgs/alberca1.jpg" class="img-fluid rounded" alt="Alberca Familiar">
+                <img src="imgs/Alberca-Familiar.jpg" class="img-fluid rounded" alt="Alberca Familiar">
             </div>
         </div>
     </div>
@@ -113,11 +113,11 @@
     <div class="container mt-4">
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-6">
-                <h3>Alberca Olímpica</h3>
-                <p>Para los amantes de la natación, contamos con una alberca semi-olímpica equipada para entrenamiento profesional.</p>
+                <h3>Alberca de olas con toboganes</h3>
+                <p>Para los amantes de la diversion extrema y los toboganes</p>
             </div>
             <div class="col-md-6">
-                <img src="imgs/alberca2.jpg" class="img-fluid rounded" alt="Alberca Olímpica">
+                <img src="imgs/Alberca-Toboganes.jpg" class="img-fluid rounded" alt="Alberca Olímpica">
             </div>
         </div>
     </div>
@@ -130,17 +130,69 @@
                 <p>Espacio diseñado para los más pequeños, con profundidad segura y juegos acuáticos interactivos.</p>
             </div>
             <div class="col-md-6">
-                <img src="imgs/alberca3.jpg" class="img-fluid rounded" alt="Alberca Infantil">
+                <img src="imgs/Alberca-Infantil.jpg" class="img-fluid rounded" alt="Alberca Infantil">
             </div>
         </div>
     </div>
+
+    <!-- Cuarta Sección: Imagen Izquierda - Texto Derecha -->
+    <div class="container mt-4">
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-6">
+                <h3>Lago natural</h3>
+                <p>Si te gusta la naturaleza y nadar para que te lleve la corriente este es tu ideal</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Lago-Natural.jpg" class="img-fluid rounded" alt="Alberca Olímpica">
+            </div>
+        </div>
+    </div>
+    
+
 </div>
 
 
         <div id="hospedaje" style="display:none;">
             <h2>Hospedaje</h2>
-            <p>Descubre nuestro hospedaje de lujo.</p>
+             <!-- Primera Sección: Texto Izquierda - Imagen Derecha -->
+    <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Cabaña 1</h3>
+                <p>Ideal para la familia (Maximo 4 personas) </p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Cabaña1.jpg" class="img-fluid rounded" alt="Alberca Familiar">
+            </div>
         </div>
+    </div>
+    <!-- Segunda Sección: Imagen Izquierda - Texto Derecha -->
+    <div class="container mt-4">
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-6">
+                <h3>Cabaña 2</h3>
+                <p>Ideal para un viaje de Amigos (Maximo 6 personas)</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Cabaña2.jpg" class="img-fluid rounded" alt="Alberca Olímpica">
+            </div>
+        </div>
+    </div>
+
+ <!-- Tercera Sección: Texto Izquierda - Imagen Derecha -->
+ <div class="container mt-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3>Áreas de camping</h3>
+                <p>Perfecto para Venir a la naturaleza y conocer tu lado natural</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imgs/Camping.jpg" class="img-fluid rounded" alt="Alberca Familiar">
+            </div>
+        </div>
+    </div>
+
+    </div>
 
         <div id="servicios" style="display:none;">
             <h2>Servicios</h2>
