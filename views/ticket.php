@@ -35,7 +35,83 @@ $detalles = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket de Compra</title>
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #F4F4F4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .ticket {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1d6cd8;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background: #1d6cd8;
+            color: white;
+        }
+
+        button {
+            background: #1d6cd8;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #155bb5;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #1d6cd8;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #155bb5;
+        }
+    </style>
 </head>
 <body>
     <div class="ticket">
@@ -45,7 +121,7 @@ $detalles = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <hr>
 
         <h3>Detalles de la compra</h3>
-        <table border="1">
+        <table>
             <thead>
                 <tr>
                     <th>Descripción</th>
@@ -56,9 +132,7 @@ $detalles = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                 <?php foreach ($detalles as $detalle): ?>
                     <tr>
-                        <td>
-                            <?= $detalle['producto_nombre'] ?: $detalle['entrada_tipo'] ?>
-                        </td>
+                        <td><?= $detalle['producto_nombre'] ?: $detalle['entrada_tipo'] ?></td>
                         <td><?= $detalle['cantidad'] ?></td>
                         <td>$<?= number_format($detalle['subtotal'], 2) ?></td>
                     </tr>
@@ -73,3 +147,4 @@ $detalles = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </body>
 </html>
+
