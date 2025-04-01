@@ -153,7 +153,7 @@
 
 
         <div id="hospedaje" style="display:none;">
-            <h2>Hospedaje</h2>
+            <h2 class="mt-4">Hospedaje</h2>
              <!-- Primera Sección: Texto Izquierda - Imagen Derecha -->
     <div class="container mt-4">
         <div class="row align-items-center">
@@ -195,7 +195,7 @@
     </div>
 
         <div id="servicios" style="display:none;">
-            <h2>Servicios</h2>
+            <h2 class="mt-4">Servicios</h2>
            <!-- Primera Sección: Texto Izquierda - Imagen Derecha -->
     <div class="container mt-4">
         <div class="row align-items-center">
