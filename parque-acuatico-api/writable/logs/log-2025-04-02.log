@@ -1,0 +1,512 @@
+ERROR - 2025-04-02 04:36:43 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AuthController.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AuthController->login()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AuthController.php(16): CodeIgniter\BaseModel->first()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AuthController->login()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:36:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(16): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:37:06 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->usuarios()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->usuarios()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:37:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/usuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Usuarios`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->usuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:37:37 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:37:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Productos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:37:49 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:37:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Productos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:37:57 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:37:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Productos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:38:10 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->ventas()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(26): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->ventas()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:38:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/ventas]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Ventas`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(26): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:38:36 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:38:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Productos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:38:58 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:38:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Productos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:42:19 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:42:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Productos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
+ERROR - 2025-04-02 04:42:48 --> Error connecting to the database: mysqli_sql_exception: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Plugin 'mysql_native_password' is not loaded in C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\app\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+#7 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\parque_acuatico\parque-acuatico-api\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-04-02 04:42:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Plugin 'mysql_native_password' is not loaded
+[Method: GET, Route: admin/productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `Productos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\AdminController.php(21): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\parque_acuatico\\parque-acuatico-api\\public\\index.php')
